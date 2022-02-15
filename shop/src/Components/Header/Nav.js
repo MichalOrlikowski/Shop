@@ -1,14 +1,15 @@
 import s from "./Header.module.css"
+import {NavLink} from "react-router-dom";
 function Nav() {
 
 
     return (
         <>
             <div className={s.nav}>
-                <button>men's clothing"</button>
-                <button>women's clothing</button>
-                <button>jewelery</button>
-                <button>electronics</button>
+              <NavLink to="/men"> <button>men's clothing"</button></NavLink>
+               <NavLink to="/women"> <button>women's clothing</button></NavLink>
+               <NavLink to="/jewelery"> <button>jewelery</button></NavLink>
+               <NavLink to="/electronics"> <button>electronics</button></NavLink>
             </div>
         </>
     );

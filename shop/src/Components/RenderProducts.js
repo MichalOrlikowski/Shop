@@ -3,7 +3,7 @@ import s from "./RenderProducts.module.css"
 
 
 
-function RenderProducts({ productList, setProductList }) {
+function RenderProducts({ productList, setProductList, setCart, cart }) {
 
 
     const getProduct = () => {
@@ -17,11 +17,18 @@ function RenderProducts({ productList, setProductList }) {
         console.log(productList)
     }, [])
 
+    const Add = (product) =>{
+        setCart((prevValue)=>[...prevValue, product])
+        
+    }
+
     const render = () => productList.map((product) => (
         <div className={s.productContainer} key={product.id}>
             <div className={s.title} >{product.title}</div>
             <img className={s.img} src={product.image}></img>
-            <p className={s.price}>{product.price}</p>
+            <p className={s.price}><button onClick={() =>Add(product)}>Add</button> {product.price}</p>
+            
+            
         </div>
     ))
 

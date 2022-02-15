@@ -1,5 +1,7 @@
 import s from "./Header.module.css"
 import Nav from "./Nav";
+import { NavLink } from "react-router-dom";
+
 
 function Header() {
 
@@ -7,10 +9,11 @@ function Header() {
   return (
     <>
       <div className={s.Container}>
-        <h1 className={s.title}>Shop</h1>
-        <button className={s.button}>Koszyk</button>
+        <NavLink to="/" className={s.title}> <h1>Shop</h1></NavLink>
+        <NavLink to="/shop"><button className={s.button}>Koszyk</button></NavLink>
+
       </div>
-      
+
       <Nav />
       <hr />
     </>

@@ -12,8 +12,9 @@
     border: 1px solid black;
     margin: 40px;
     display: flex;
-    align-items:baseline;
     justify-content: center;
+    align-items:baseline;
+    
     flex-wrap: wrap;
 }
 
@@ -22,20 +23,20 @@
 }
 
 .img{
-    width:70%;
-    /* height: auto; */
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+    width:220px;
+    height: auto;
+    margin-left: 20px;
     
     
 }
 
 .price{
+font-size: 20px;
 display: flex;
 justify-content: flex-end;
 align-items: flex-end;
 text-align: end;
 align-self: flex-end;
 }
+
 
