@@ -1,10 +1,13 @@
 import './App.css';
+import { useEffect, useState } from "react";
 import RenderProducts from "./Components/RenderProducts"
 
 function App() {
+  const [productList, setProductList] = useState([]);
+  
   return (
    <>
-   <div>{RenderProducts()}</div>
+   <RenderProducts productList={productList} setProductList={setProductList}/>
    
    </>
   );

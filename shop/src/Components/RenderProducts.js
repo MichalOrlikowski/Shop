@@ -1,34 +1,35 @@
 import { useEffect, useState } from "react";
+import s from "./RenderProducts.module.css"
 
 
 
+function RenderProducts({ productList, setProductList }) {
 
-function RenderProducts() {
-    const [productList, setProductList] = useState([]);
 
     const getProduct = () => {
         fetch("https://fakestoreapi.com/products")
-        .then(response => response.json())
-        .then(response => setProductList(response));
+            .then(response => response.json())
+            .then(response => setProductList(response));
     };
-  
-    useEffect(()=>{
+
+    useEffect(() => {
         getProduct();
-        
-    }, [ ])
-  
-    const render = () => productList.map((product)=>(
-        <div key={product.id}>
-            <div>{product.title}</div>
+        console.log(productList)
+    }, [])
+
+    const render = () => productList.map((product) => (
+        <div className={s.productContainer} key={product.id}>
+            <div className={s.title} >{product.title}</div>
+            <img className={s.img} src={product.image}></img>
+            <p className={s.price}>{product.price}</p>
         </div>
     ))
-  
+
     return (
-     <>
-     <div>{render()}</div>
-     
-     </>
+        <>
+            <div className={s.container}>{render()}</div>
+
+        </>
     );
-  }
-  export default RenderProducts;
-  
+}
+export default RenderProducts;
