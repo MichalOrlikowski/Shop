@@ -10,7 +10,7 @@ function Header() {
     <>
       <div className={s.Container}>
         <NavLink to="/" className={s.title}> <h1>Shop</h1></NavLink>
-        <NavLink to="/shop"><button className={s.button}>Koszyk</button></NavLink>
+        <NavLink to="/buy"><button className={s.button}>Koszyk</button></NavLink>
 
       </div>
 

@@ -14,8 +14,8 @@ function RenderProducts({ productList, setProductList, setCart, cart }) {
 
     useEffect(() => {
         getProduct();
-        console.log(productList)
-    }, [])
+        console.log(cart)
+    }, [ ])
 
     const Add = (product) =>{
         setCart((prevValue)=>[...prevValue, product])

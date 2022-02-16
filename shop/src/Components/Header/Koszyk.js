@@ -1,11 +1,12 @@
-import s from "./Header.module.css"
+import s from "./Koszyk.module.css"
 
-function Shop(cart) {
+function Koszyk({cart}) {
 
-    const renderShop = () => cart.map((product) => (
+    const renderKoszyk = () => cart.map((product) => (
         <div className={s.productContainer} key={product.id}>
             <div className={s.title} >{product.title}</div>
             <img className={s.img} src={product.image}></img>
+            <p className={s.price}> {product.price}</p>
             
             
             
@@ -14,9 +15,9 @@ function Shop(cart) {
 
     return (
         <>
-          <div>{renderShop()}</div> 
+          <div className={s.container}>{renderKoszyk()}</div> 
         </>
     );
 }
 
-export default Shop;
+export default Koszyk;

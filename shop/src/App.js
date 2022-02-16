@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import RenderProducts from "./Components/RenderProducts"
 import Header from "./Components/Header/Header"
-import Shop from "./Components/Header/Shop"
+import Koszyk from "./Components/Header/Koszyk"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<RenderProducts productList={productList} setProductList={setProductList} setCart={setCart} cart={cart}/>}/>
-          <Route  path="/shop" element={<shop cart={cart}/>}/>
+          <Route  path="/buy" element={<Koszyk cart={cart}/>}/>
           <Route  path="/men"  element={<RenderProducts productList={men} setProductList={setProductList} setCart={setCart} cart={cart}/>}/>
           <Route  path="/women" element={<RenderProducts productList={women} setProductList={setProductList} setCart={setCart} cart={cart}/>}/>
           <Route  path="/jewelery" element={<RenderProducts productList={jewelery} setProductList={setProductList} setCart={setCart} cart={cart}/>}/>
