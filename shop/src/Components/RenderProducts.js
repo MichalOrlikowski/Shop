@@ -15,7 +15,7 @@ function RenderProducts({ productList, setProductList, setCart, cart }) {
     useEffect(() => {
         getProduct();
         console.log(cart)
-    }, [ ])
+    }, [])
 
     const Add = (product) =>{
         setCart((prevValue)=>[...prevValue, product])
@@ -26,7 +26,7 @@ function RenderProducts({ productList, setProductList, setCart, cart }) {
         <div className={s.productContainer} key={product.id}>
             <div className={s.title} >{product.title}</div>
             <img className={s.img} src={product.image}></img>
-            <p className={s.price}><button onClick={() =>Add(product)}>Add</button> {product.price}</p>
+            <p className={s.price}><button onClick={() =>Add(product)}>Add</button> {product.price}$</p>
             
             
         </div>

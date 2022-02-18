@@ -1,21 +1,25 @@
+
 .container{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     
+    
 }
 
 .productContainer{
     width:300px;
     height: 500px;
-    border: 1px solid black;
+    border: 1px solid gray;
     margin: 40px;
     display: flex;
     justify-content: center;
     align-items:baseline;
-    
     flex-wrap: wrap;
+    -webkit-box-shadow: 6px -6px 20px 1px rgba(66, 68, 90, 1);
+-moz-box-shadow: 6px -6px 20px 1px rgba(66, 68, 90, 1); 
+ box-shadow: 6px -6px 20px 1px rgba(66, 68, 90, 1);
 }
 
 .title{
@@ -38,5 +42,4 @@ align-items: flex-end;
 text-align: end;
 align-self: flex-end;
 }
-
 
